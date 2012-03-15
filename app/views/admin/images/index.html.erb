@@ -1,0 +1,9 @@
+<% @paintings.each do |p| %>
+	<div class="image_container">
+	<%= link_to image_tag("admin/close-icon.gif", :class => "destroy_icon" )%>
+		<%= image_tag p.image_url(:thumb).to_s, :id => p.id %>
+		
+	</div>
+<% end %>
+
+<%= link_to "Добавить картинку", new_admin_image_path, :class => "add_coffee" %>

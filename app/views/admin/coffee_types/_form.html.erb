@@ -1,0 +1,15 @@
+<%= form_for @coffeetype, :url => :admin_coffee_types do |f| %>
+
+  <div>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div>
+    <%= f.submit "Сохранить" %>
+  </div>
+
+<% end %>

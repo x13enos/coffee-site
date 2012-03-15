@@ -1,0 +1,2 @@
+module Admin::GmapsHelper
+end

@@ -1,0 +1,10 @@
+<%= form_for @painting, :url => :admin_images, :multipart => true do |f| %>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.label "Главная страница" %>
+    <%= f.check_box :main %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

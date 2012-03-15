@@ -1,0 +1,39 @@
+<div id="cell">
+            
+    			<div id="content_left" style="width: 507px;">
+            	
+            		<div id="content_left_opacity" class="width2"></div>
+                
+              	    <div style="margin-left:21px; margin-top: 20px; padding-right: 20px; position:relative; ">
+                    
+                   		 <h2>About coffee</h2>
+                	
+               	   		 <hr color="#cccccc" size="0.5" width="460px">
+                         
+                         <% @coffee_articles.each do |coffee| %>
+                            <div class="coffee_article">
+                              <div class="coffee_name"><%= coffee.name %></div>
+                              <div class="coffee_price"><%= coffee.price %></div>
+                            </div>
+                         <% end %>
+                   	
+                   
+                   </div>
+                 
+        		</div>
+            
+            	<div id="content_right" style="width: 173px; min-height: 230px;">
+                
+                 
+                     <h2 style="font-size:21px;">About</h2>
+                     <hr color="#cccccc" size="0.5" width="160px" style="margin-left: 0px; margin-top: 7px;">
+                     
+                     <h5 style="margin-top: 16px; margin-right: 10px;">Можете расчитать стоимость заказа. Выберите тип напитка и колличество чашек. Будет рассчитана сумма и итого.</h5> <br>
+                     
+                     <h2 style="font-size:21px;">Discount</h2>
+                     <hr color="#cccccc" size="0.5" width="160px" style="margin-left: 0px; margin-top: 7px;">
+                     <h5 style="margin-top: 16px; margin-right: 10px;">При расчёте суммы и итого наименьшая сумма по одному из типов напитка будет обнулена. </h5>
+                    
+           		</div>
+            
+            </div>

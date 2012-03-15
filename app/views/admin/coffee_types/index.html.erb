@@ -1,0 +1,9 @@
+<% @coffee_types.each do |coffee| %>
+	<div class="coffee_article">
+		<div class="coffee_name"><%= coffee.name %></div>
+		<div class="coffee_price"><%= coffee.price %></div>
+		<%= link_to "destroy", admin_coffee_type_path(coffee), :method => :delete %>
+	</div>
+<% end %>
+
+<%= link_to "Добавить тип кофе", new_admin_coffee_type_path, :class => "add_coffee" %>

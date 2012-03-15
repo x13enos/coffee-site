@@ -1,0 +1,11 @@
+<%= form_for @coordinate, :url => :admin_gmaps do |f| %>
+	<div>
+		<%= f.label "Широта" %>
+		<%= f.text_field :lat %>
+	</div>
+	<div>	
+		<%= f.label "Долгота" %>
+		<%= f.text_field :long %>
+	</div>
+		<%= f.submit "Сохранить координаты" %>
+<% end %>

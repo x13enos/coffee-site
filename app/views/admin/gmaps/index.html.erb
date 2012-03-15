@@ -1,0 +1,4 @@
+<% @coordinates.each do |c| %>
+	<div><%= c.lat %>, <%= c.long %></div>
+<% end %>
+<%= link_to "Добавить координаты", new_admin_gmap_path %>
