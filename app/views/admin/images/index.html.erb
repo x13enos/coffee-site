@@ -1,6 +1,6 @@
 <% @paintings.each do |p| %>
 	<div class="image_container">
-	<%= link_to image_tag("admin/close-icon.gif", :class => "destroy_icon" )%>
+	<%= link_to image_tag("admin/close-icon.gif", :class => "destroy_icon") %>
 		<%= image_tag p.image_url(:thumb).to_s, :id => p.id %>
 		
 	</div>

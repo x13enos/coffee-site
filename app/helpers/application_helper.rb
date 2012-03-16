@@ -16,7 +16,7 @@ module ApplicationHelper
 	      "Coffee Price" => "/price",
 	      "Images" => "/images",
 	      "Video" => "/video",
-	      "Google Maps" => "/gmaps",
+	      "Google Maps" => "/places",
         }
 
         a = "<div id='dl_link'>"

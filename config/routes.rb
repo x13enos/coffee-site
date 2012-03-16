@@ -1,5 +1,7 @@
 CoffeeSite::Application.routes.draw do
   
+  get "places/index"
+
   get "gmaps/index"
 
   get "images/index"
@@ -21,7 +23,7 @@ CoffeeSite::Application.routes.draw do
 
   match "video" => "pages#video"
 
-  match "gmaps" => "pages#gmaps"
+  match "places" => "places#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
