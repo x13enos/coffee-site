@@ -79735,3 +79735,1191 @@ Served asset /front/content_.png - 304 Not Modified (0ms)
 
 Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 17:53:46 +0200
 Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:06:57 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (586.0ms)
+Completed 500 Internal Server Error in 588ms
+
+ActionView::Template::Error (SyntaxError: reserved word "function" on line 39
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'places' %>
+    4: <% end %>
+    5: 
+    6: <div id="cell">
+  app/views/places/index.html.erb:3:in `block in _app_views_places_index_html_erb__465187522__616761238'
+  app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb__465187522__616761238'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Processing by PlacesController#index as HTML
+Compiled places.js  (87ms)  (pid 2659)
+  Rendered places/index.html.erb within layouts/application (95.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 108ms (Views: 107.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /places.js - 200 OK (50ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Processing by PlacesController#get_places as */*
+  [1m[35mPlace Load (0.5ms)[0m  SELECT "places".* FROM "places" 
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:07:52 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:07:59 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:08:37 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (73.4ms)
+Completed 500 Internal Server Error in 75ms
+
+ActionView::Template::Error (SyntaxError: reserved word "function" on line 37
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'places' %>
+    4: <% end %>
+    5: 
+    6: <div id="cell">
+  app/views/places/index.html.erb:3:in `block in _app_views_places_index_html_erb__465187522__616761238'
+  app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb__465187522__616761238'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:08:55 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (104.2ms)
+Completed 500 Internal Server Error in 110ms
+
+ActionView::Template::Error (Error: Parse error on line 36: Unexpected 'INDENT'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'places' %>
+    4: <% end %>
+    5: 
+    6: <div id="cell">
+  app/views/places/index.html.erb:3:in `block in _app_views_places_index_html_erb__465187522__616761238'
+  app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb__465187522__616761238'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.2ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:16 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:16 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:16 +0200
+Served asset /lightbox.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:16 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/close-icon.gif" for 127.0.0.1 at 2012-03-17 18:09:16 +0200
+Served asset /admin/close-icon.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:09:18 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:09:22 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (97.2ms)
+Completed 500 Internal Server Error in 99ms
+
+ActionView::Template::Error (Error: Parse error on line 36: Unexpected 'INDENT'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'places' %>
+    4: <% end %>
+    5: 
+    6: <div id="cell">
+  app/views/places/index.html.erb:3:in `block in _app_views_places_index_html_erb__465187522__616761238'
+  app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb__465187522__616761238'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Processing by PlacesController#get_places as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT "places".* FROM "places" [0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:09:29 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:33 +0200
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:09:47 +0200
+Error compiling asset places.js:
+ExecJS::RuntimeError: SyntaxError: reserved word "function" on line 37
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)
+Served asset /places.js - 500 Internal Server Error
+
+
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:10:36 +0200
+Error compiling asset places.js:
+ExecJS::ProgramError: Error: Parse error on line 36: Unexpected 'INDENT'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)
+Served asset /places.js - 500 Internal Server Error
+
+
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:10:39 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (87.6ms)
+Completed 500 Internal Server Error in 90ms
+
+ActionView::Template::Error (Error: Parse error on line 36: Unexpected 'INDENT'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'places' %>
+    4: <% end %>
+    5: 
+    6: <div id="cell">
+  app/views/places/index.html.erb:3:in `block in _app_views_places_index_html_erb__465187522__616761238'
+  app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb__465187522__616761238'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (41.2ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (44.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:10:46 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (87.0ms)
+Completed 500 Internal Server Error in 89ms
+
+ActionView::Template::Error (Error: Parse error on line 36: Unexpected 'INDENT'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'places' %>
+    4: <% end %>
+    5: 
+    6: <div id="cell">
+  app/views/places/index.html.erb:3:in `block in _app_views_places_index_html_erb__465187522__616761238'
+  app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb__465187522__616761238'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:10:53 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (85.6ms)
+Completed 500 Internal Server Error in 88ms
+
+ActionView::Template::Error (Error: Parse error on line 35: Unexpected 'INDENT'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'places' %>
+    4: <% end %>
+    5: 
+    6: <div id="cell">
+  app/views/places/index.html.erb:3:in `block in _app_views_places_index_html_erb__465187522__616761238'
+  app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb__465187522__616761238'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:11:14 +0200
+Processing by PlacesController#index as HTML
+Compiled places.js  (87ms)  (pid 2659)
+  Rendered places/index.html.erb within layouts/application (95.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 107ms (Views: 107.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:11:14 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:14 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:14 +0200
+Served asset /places.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:14 +0200
+Served asset /lightbox.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:14 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:14 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:11:15 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:11:15 +0200
+Processing by PlacesController#get_places as */*
+  [1m[35mPlace Load (3.0ms)[0m  SELECT "places".* FROM "places" 
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:11:15 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:11:15 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:11:15 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:11:15 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:11:15 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:11:15 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:11:16 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /lightbox.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Processing by PlacesController#get_places as */*
+  [1m[36mPlace Load (1.6ms)[0m  [1mSELECT "places".* FROM "places" [0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:11:21 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:11:23 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:11:23 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:23 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:23 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:23 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:23 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:23 +0200
+Served asset /lightbox.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:23 +0200
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:11:24 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:11:24 +0200
+Processing by PlacesController#get_places as */*
+  [1m[35mPlace Load (2.1ms)[0m  SELECT "places".* FROM "places" 
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:11:24 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:11:24 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:11:24 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:11:24 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:11:24 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:11:24 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /places.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /lightbox.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Processing by PlacesController#get_places as */*
+  [1m[36mPlace Load (0.5ms)[0m  [1mSELECT "places".* FROM "places" [0m
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:11:25 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:11:43 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Processing by PlacesController#index as HTML
+Compiled places.js  (93ms)  (pid 2659)
+  Rendered places/index.html.erb within layouts/application (100.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 113ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /lightbox.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /places.js - 200 OK (1ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Processing by PlacesController#get_places as */*
+  [1m[35mPlace Load (2.3ms)[0m  SELECT "places".* FROM "places" 
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:11:44 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:11:46 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:11:51 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:11:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:51 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:51 +0200
+Served asset /jquery-ui.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:51 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:51 +0200
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:11:51 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Processing by PlacesController#get_places as */*
+  [1m[36mPlace Load (1.0ms)[0m  [1mSELECT "places".* FROM "places" [0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:11:52 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:12:43 +0200
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (115.3ms)
+Completed 500 Internal Server Error in 118ms
+
+ActionView::Template::Error (SyntaxError: unmatched OUTDENT on line 37
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/places.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'places' %>
+    4: <% end %>
+    5: 
+    6: <div id="cell">
+  app/views/places/index.html.erb:3:in `block in _app_views_places_index_html_erb__465187522__616761238'
+  app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb__465187522__616761238'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Processing by PlacesController#index as HTML
+Compiled places.js  (92ms)  (pid 2659)
+  Rendered places/index.html.erb within layouts/application (127.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 140.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /lightbox.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /places.js - 200 OK (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Processing by PlacesController#get_places as */*
+  [1m[35mPlace Load (2.2ms)[0m  SELECT "places".* FROM "places" 
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:12:50 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:13:01 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:13:04 +0200
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:14:27 +0200
+Processing by PlacesController#index as HTML
+Compiled places.js  (103ms)  (pid 2659)
+  Rendered places/index.html.erb within layouts/application (110.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 122.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:14:27 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:27 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:27 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:27 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:27 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:27 +0200
+Served asset /places.js - 200 OK (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:14:28 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:14:28 +0200
+Processing by PlacesController#get_places as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT "places".* FROM "places" [0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:14:28 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:14:28 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:14:28 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:14:28 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:14:28 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:14:28 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:14:30 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:35 +0200
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Processing by PlacesController#index as HTML
+Compiled places.js  (100ms)  (pid 2659)
+  Rendered places/index.html.erb within layouts/application (108.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 121ms (Views: 120.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /places.js - 200 OK (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Processing by PlacesController#get_places as */*
+  [1m[35mPlace Load (0.9ms)[0m  SELECT "places".* FROM "places" 
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:14:52 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:14:59 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Processing by PlacesController#index as HTML
+Compiled places.js  (99ms)  (pid 2659)
+  Rendered places/index.html.erb within layouts/application (107.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 119.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /places.js - 200 OK (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Processing by PlacesController#get_places as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT "places".* FROM "places" [0m
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:15:00 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-17 18:15:09 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2012-03-17 18:16:10 +0200
+Processing by PlacesController#index as HTML
+Compiled places.js  (89ms)  (pid 2659)
+  Rendered places/index.html.erb within layouts/application (98.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 112ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 18:16:10 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 18:16:10 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-17 18:16:10 +0200
+Served asset /jquery-ui.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-17 18:16:10 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2012-03-17 18:16:10 +0200
+Served asset /places.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 18:16:10 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 18:16:10 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-17 18:16:11 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/places/get" for 127.0.0.1 at 2012-03-17 18:16:11 +0200
+Processing by PlacesController#get_places as */*
+  [1m[35mPlace Load (0.5ms)[0m  SELECT "places".* FROM "places" 
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-17 18:16:11 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.gif" for 127.0.0.1 at 2012-03-17 18:16:11 +0200
+Served asset /front/header_.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-17 18:16:11 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-17 18:16:11 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-17 18:16:11 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-17 18:16:11 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)

@@ -35,24 +35,3 @@ $ ->
         )
       )
   )
-# $(function(){
-# 	geocoder = new google.maps.Geocoder(); 
-#     myposition = new google.maps.LatLng(44.581976,33.514451);
-#     var myOptions = {
-#         zoom: 12,
-#         center: myposition,
-#         mapTypeId: google.maps.MapTypeId.ROADMAP,
-#     };
-    
-#      map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-
-#         marker_man = new google.maps.Marker({
-#         draggable: true,
-#         position: myposition,
-#         map: map,
-#         title: "моё местоположение",
-# 		icon: "http://maps.google.com/mapfiles/kml/shapes/man.png",
-#     });
-    
-#     google.maps.event.addListener(marker_man,"dragend", short_way);
-# })
