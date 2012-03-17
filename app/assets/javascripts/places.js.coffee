@@ -8,7 +8,7 @@ $ ->
     zoom: 11
     mapTypeId: google.maps.MapTypeId.ROADMAP
    
-  map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  map = new google.maps.Map(document.getElementById("map_canvas"), myOptions)
 
   $.ajax(
     url: "places/get"
@@ -18,6 +18,20 @@ $ ->
           position: new google.maps.LatLng(this.lat, this.long)
           map: map
           clickable: true
+        )
+        google.maps.event.addListener(marker, 'click', ->
+          geocoder = new google.maps.Geocoder()
+          geocoder.geocode('latLng': this.position, (results, status) ->
+            if (status == google.maps.GeocoderStatus.OK)
+              if (results[0])
+                infomarker = new google.maps.InfoWindow;
+                infomarker.close()
+                content_kofe = results[0].address_components[1].long_name + " " +  results[0].address_components[0].long_name
+                infomarker.setContent(content_kofe)
+                infomarker.open(map, marker)
+              else
+                alert("Geocoder failed due to: " + status)
+          )
         )
       )
   )
