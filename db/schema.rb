@@ -11,18 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315212338) do
+ActiveRecord::Schema.define(:version => 20120316154306) do
 
   create_table "coffee_types", :force => true do |t|
     t.string   "name"
     t.integer  "price"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "coordinates", :force => true do |t|
-    t.float    "lat"
-    t.float    "long"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -32,6 +25,13 @@ ActiveRecord::Schema.define(:version => 20120315212338) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.boolean  "main"
+  end
+
+  create_table "places", :force => true do |t|
+    t.float    "lat"
+    t.float    "long"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -1,9 +1,0 @@
-<%= content_tag(:div, flash.notice) %>
-<% @coordinates.each do |c| %>
-	<div>
-		<%= c.lat %>,
-		<%= c.long %>
-		<%= link_to image_tag("admin/close-icon.gif"), admin_gmap_path(c), :method => :delete %>
-	</div>
-<% end %>
-<%= link_to "Добавить координаты", new_admin_gmap_path %>

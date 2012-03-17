@@ -1,18 +1,13 @@
 CoffeeSite::Application.routes.draw do
-  
-  get "places/index"
-
-  get "gmaps/index"
-
-  get "images/index"
 
   namespace :admin do
     resources :coffee_types
     resources :images
-    resources :gmaps
+    resources :places
   end
 
   resources :admin, :only => :index
+  
     
 
   match "home" => "pages#home"
@@ -24,6 +19,7 @@ CoffeeSite::Application.routes.draw do
   match "video" => "pages#video"
 
   match "places" => "places#index"
+  match "places/get" => "places#get_places"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

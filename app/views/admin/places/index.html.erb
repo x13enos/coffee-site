@@ -1,0 +1,9 @@
+<%= content_tag(:div, flash.notice) %>
+<% @place.each do |c| %>
+	<div>
+		<%= c.lat %>,
+		<%= c.long %>
+		<%= link_to image_tag("admin/close-icon.gif"), admin_place_path(c), :method => :delete %>
+	</div>
+<% end %>
+<%= link_to "Добавить координаты", new_admin_place_path %>
