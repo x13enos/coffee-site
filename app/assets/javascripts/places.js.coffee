@@ -19,6 +19,7 @@ $ ->
           map: map
           clickable: true
         )
+
         google.maps.event.addListener(marker, 'click', ->
           geocoder = new google.maps.Geocoder()
           geocoder.geocode('latLng': this.position, (results, status) ->
@@ -31,6 +32,17 @@ $ ->
                 infomarker.open(map, marker)
               else
                 alert("Geocoder failed due to: " + status)
+          )
+        )
+
+        navigator.geolocation.getCurrentPosition((position) ->
+          initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude)
+          marker_man = new google.maps.Marker(
+            position: initialLocation
+            map: map
+            title: 'ваше местоположение'
+            icon: "http://maps.google.com/mapfiles/kml/shapes/man.png"
+            clickable: true
           )
         )
       )
