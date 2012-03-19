@@ -1,11 +1,11 @@
 <%= form_for @place, :url => :admin_places do |f| %>
 	<div>
 		<%= f.label "Широта" %>
-		<%= f.text_field :lat %>
+		<%= f.text_field :lat, :id => 'lat' %>
 	</div>
 	<div>	
 		<%= f.label "Долгота" %>
-		<%= f.text_field :long %>
+		<%= f.text_field :long, :id => 'lag' %>
 	</div>
 		<%= f.submit "Сохранить координаты" %>
 <% end %>

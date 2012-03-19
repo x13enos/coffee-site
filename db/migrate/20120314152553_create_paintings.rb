@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreatePaintings < ActiveRecord::Migration
   def change
     create_table :paintings do |t|

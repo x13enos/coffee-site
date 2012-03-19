@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RenameCoordinateToPlace < ActiveRecord::Migration
   def up
   	rename_table :coordinates, :places

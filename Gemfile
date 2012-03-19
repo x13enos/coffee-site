@@ -9,6 +9,7 @@ gem 'pg'
 gem 'carrierwave'
 gem "rmagick"
 gem "heroku"
+gem "magic_encoding"
 
 # Gems used only for assets and not required
 # in production environments by default.

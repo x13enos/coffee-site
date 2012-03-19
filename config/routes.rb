@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 CoffeeSite::Application.routes.draw do
 
   namespace :admin do
@@ -8,8 +9,6 @@ CoffeeSite::Application.routes.draw do
 
   resources :admin, :only => :index
   
-    
-
   match "home" => "pages#home"
 
   match "price" => "pages#price"
@@ -19,6 +18,7 @@ CoffeeSite::Application.routes.draw do
   match "video" => "pages#video"
 
   match "places" => "places#index"
+
   match "places/get" => "places#get_places"
 
   # The priority is based upon order of creation:
