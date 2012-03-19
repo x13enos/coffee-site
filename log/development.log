@@ -91912,3 +91912,829 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Adm
 
 
   Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:27:15 +0200
+Processing by Admin::PlacesController#new as HTML
+  Rendered admin/places/new.html.erb within layouts/application (101.9ms)
+Completed 500 Internal Server Error in 109ms
+
+ActionView::Template::Error (399: unexpected token at '"(function() {\u000a\u000a  $(function() {\u000a    return $('#link_to_maps').click(function(e) {\u000a      var infomarker, map, myOptions;\u000a      e.preventDefault();\u000a      $('#content').append('<div style=\"width: 450px; height: 400px;\" id=\"map_canvas\"></div>');\u000a      $('#content').append('<input type=\"button\">5@=CBLAO 2 <>5 <5AB>?>;>65=85</input>');\u000a      $('#link_to_maps').hide();\u000a      myOptions = {\u000a        center: new google.maps.LatLng(44.59389, 33.529587),\u000a        zoom: 11,\u000a        mapTypeId: google.maps.MapTypeId.ROADMAP\u000a      };\u000a      map = new google.maps.Map(document.getElementById(\"map_canvas\"), myOptions);\u000a      infomarker = new google.maps.InfoWindow;\u000a      $.ajax({\u000a        url: 'places_get',\u000a        success: function(data) {\u000a          return $(data).each(function() {\u000a            var marker;\u000a            return marker = new google.maps.Marker({\u000a              position: new google.maps.LatLng(this.lat, this.long),\u000a              map: map,\u000a              clickable: true\u000a            });\u000a          });\u000a        }\u000a      });\u000a      return navigator.geolocation.getCurrentPosition(function(position) {\u000a        var initialLocation, marker_man;\u000a        initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);\u000a        marker_man = new google.maps.Marker({\u000a          draggable: true,\u000a          position: initialLocation,\u000a          map: map,\u000a          title: '20H5 <5AB>?>;>65=85',\u000a          icon: \"http://maps.google.com/mapfiles/kml/shapes/man.png\",\u000a          clickable: true\u000a        });\u000a        $('#lat').val(position.coords.latitude);\u000a        $('#lag').val(position.coords.longitude);\u000a        return google.maps.event.addListener(marker_man, 'dragend', function() {\u000a          $('#lat').val(marker_man.position.Ua);\u000a          return $('#lag').val(marker_man.position.Va);\u000a        });\u000a      });\u000a    });\u000a  });\u000a\u000a}).call(this);\u000a"]
+'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/admin.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'admin' %>
+    4: <% end %>
+    5: 
+    6: <h1>Добавление координат</h1>
+  app/views/admin/places/new.html.erb:3:in `block in _app_views_admin_places_new_html_erb__583103542__616758068'
+  app/views/admin/places/new.html.erb:1:in `_app_views_admin_places_new_html_erb__583103542__616758068'
+  app/controllers/admin/places_controller.rb:12:in `new'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:27:35 +0200
+Processing by Admin::PlacesController#new as HTML
+Compiled admin.js  (94ms)  (pid 3779)
+  Rendered admin/places/_form.html.erb (3.4ms)
+  Rendered admin/places/new.html.erb within layouts/application (106.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-19 16:27:35 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-19 16:27:35 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-19 16:27:35 +0200
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-19 16:27:35 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-19 16:27:35 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2012-03-19 16:27:35 +0200
+Served asset /admin.js - 200 OK (2ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-19 16:27:35 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-19 16:27:36 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-19 16:27:36 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-19 16:27:36 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-19 16:27:36 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-19 16:27:36 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-19 16:27:36 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/places/places_get" for 127.0.0.1 at 2012-03-19 16:27:39 +0200
+
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PlacesController):
+  actionpack (3.2.1) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.1) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.1) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__977170345__call__282999629__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:28:57 +0200
+Processing by Admin::PlacesController#new as HTML
+  Rendered admin/places/new.html.erb within layouts/application (105.9ms)
+Completed 500 Internal Server Error in 108ms
+
+ActionView::Template::Error (399: unexpected token at '"(function() {\u000a\u000a  $(function() {\u000a    return $('#link_to_maps').click(function(e) {\u000a      var infomarker, map, myOptions;\u000a      e.preventDefault();\u000a      $('#content').append('<div style=\"width: 450px; height: 400px;\" id=\"map_canvas\"></div>');\u000a      $('#content').append('<input type=\"button\" value=\"5@=CBLAO 2 8AE>4=>5 <5AB>?>;>65=85\"></input>');\u000a      $('#link_to_maps').hide();\u000a      myOptions = {\u000a        center: new google.maps.LatLng(44.59389, 33.529587),\u000a        zoom: 11,\u000a        mapTypeId: google.maps.MapTypeId.ROADMAP\u000a      };\u000a      map = new google.maps.Map(document.getElementById(\"map_canvas\"), myOptions);\u000a      infomarker = new google.maps.InfoWindow;\u000a      $.ajax({\u000a        url: 'places_get',\u000a        success: function(data) {\u000a          return $(data).each(function() {\u000a            var marker;\u000a            return marker = new google.maps.Marker({\u000a              position: new google.maps.LatLng(this.lat, this.long),\u000a              map: map,\u000a              clickable: true\u000a            });\u000a          });\u000a        }\u000a      });\u000a      return navigator.geolocation.getCurrentPosition(function(position) {\u000a        var initialLocation, marker_man;\u000a        initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);\u000a        marker_man = new google.maps.Marker({\u000a          draggable: true,\u000a          position: initialLocation,\u000a          map: map,\u000a          title: '20H5 <5AB>?>;>65=85',\u000a          icon: \"http://maps.google.com/mapfiles/kml/shapes/man.png\",\u000a          clickable: true\u000a        });\u000a        $('#lat').val(position.coords.latitude);\u000a        $('#lag').val(position.coords.longitude);\u000a        return google.maps.event.addListener(marker_man, 'dragend', function() {\u000a          $('#lat').val(marker_man.position.Ua);\u000a          return $('#lag').val(marker_man.position.Va);\u000a        });\u000a      });\u000a    });\u000a  });\u000a\u000a}).call(this);\u000a"]
+'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/admin.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'admin' %>
+    4: <% end %>
+    5: 
+    6: <h1>Добавление координат</h1>
+  app/views/admin/places/new.html.erb:3:in `block in _app_views_admin_places_new_html_erb__583103542__616758068'
+  app/views/admin/places/new.html.erb:1:in `_app_views_admin_places_new_html_erb__583103542__616758068'
+  app/controllers/admin/places_controller.rb:12:in `new'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:29:13 +0200
+Processing by Admin::PlacesController#new as HTML
+  Rendered admin/places/new.html.erb within layouts/application (102.3ms)
+Completed 500 Internal Server Error in 105ms
+
+ActionView::Template::Error (399: unexpected token at '"(function() {\u000a\u000a  $(function() {\u000a    return $('#link_to_maps').click(function(e) {\u000a      var infomarker, map, myOptions;\u000a      e.preventDefault();\u000a      $('#content').append('<div style=\"width: 450px; height: 400px;\" id=\"map_canvas\"></div>');\u000a      $('#content').append('<input type=\"button\" value=\"5@=CBLAO 2 8AE>4=>5 <5AB>?>;>65=85\"></input>');\u000a      $('#link_to_maps').hide();\u000a      myOptions = {\u000a        center: new google.maps.LatLng(44.59389, 33.529587),\u000a        zoom: 11,\u000a        mapTypeId: google.maps.MapTypeId.ROADMAP\u000a      };\u000a      map = new google.maps.Map(document.getElementById(\"map_canvas\"), myOptions);\u000a      infomarker = new google.maps.InfoWindow;\u000a      $.ajax({\u000a        url: 'places_get',\u000a        success: function(data) {\u000a          return $(data).each(function() {\u000a            var marker;\u000a            return marker = new google.maps.Marker({\u000a              position: new google.maps.LatLng(this.lat, this.long),\u000a              map: map,\u000a              clickable: true\u000a            });\u000a          });\u000a        }\u000a      });\u000a      return navigator.geolocation.getCurrentPosition(function(position) {\u000a        var initialLocation, marker_man;\u000a        initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);\u000a        marker_man = new google.maps.Marker({\u000a          draggable: true,\u000a          position: initialLocation,\u000a          map: map,\u000a          title: '20H5 <5AB>?>;>65=85',\u000a          icon: \"http://maps.google.com/mapfiles/kml/shapes/man.png\",\u000a          clickable: true\u000a        });\u000a        $('#lat').val(position.coords.latitude);\u000a        $('#lag').val(position.coords.longitude);\u000a        return google.maps.event.addListener(marker_man, 'dragend', function() {\u000a          $('#lat').val(marker_man.position.Ua);\u000a          return $('#lag').val(marker_man.position.Va);\u000a        });\u000a      });\u000a    });\u000a  });\u000a\u000a}).call(this);\u000a"]
+'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/admin.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'admin' %>
+    4: <% end %>
+    5: 
+    6: <h1>Добавление координат</h1>
+  app/views/admin/places/new.html.erb:3:in `block in _app_views_admin_places_new_html_erb__583103542__616758068'
+  app/views/admin/places/new.html.erb:1:in `_app_views_admin_places_new_html_erb__583103542__616758068'
+  app/controllers/admin/places_controller.rb:12:in `new'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:29:14 +0200
+Processing by Admin::PlacesController#new as HTML
+  Rendered admin/places/new.html.erb within layouts/application (100.7ms)
+Completed 500 Internal Server Error in 105ms
+
+ActionView::Template::Error (399: unexpected token at '"(function() {\u000a\u000a  $(function() {\u000a    return $('#link_to_maps').click(function(e) {\u000a      var infomarker, map, myOptions;\u000a      e.preventDefault();\u000a      $('#content').append('<div style=\"width: 450px; height: 400px;\" id=\"map_canvas\"></div>');\u000a      $('#content').append('<input type=\"button\" value=\"5@=CBLAO 2 8AE>4=>5 <5AB>?>;>65=85\"></input>');\u000a      $('#link_to_maps').hide();\u000a      myOptions = {\u000a        center: new google.maps.LatLng(44.59389, 33.529587),\u000a        zoom: 11,\u000a        mapTypeId: google.maps.MapTypeId.ROADMAP\u000a      };\u000a      map = new google.maps.Map(document.getElementById(\"map_canvas\"), myOptions);\u000a      infomarker = new google.maps.InfoWindow;\u000a      $.ajax({\u000a        url: 'places_get',\u000a        success: function(data) {\u000a          return $(data).each(function() {\u000a            var marker;\u000a            return marker = new google.maps.Marker({\u000a              position: new google.maps.LatLng(this.lat, this.long),\u000a              map: map,\u000a              clickable: true\u000a            });\u000a          });\u000a        }\u000a      });\u000a      return navigator.geolocation.getCurrentPosition(function(position) {\u000a        var initialLocation, marker_man;\u000a        initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);\u000a        marker_man = new google.maps.Marker({\u000a          draggable: true,\u000a          position: initialLocation,\u000a          map: map,\u000a          title: '20H5 <5AB>?>;>65=85',\u000a          icon: \"http://maps.google.com/mapfiles/kml/shapes/man.png\",\u000a          clickable: true\u000a        });\u000a        $('#lat').val(position.coords.latitude);\u000a        $('#lag').val(position.coords.longitude);\u000a        return google.maps.event.addListener(marker_man, 'dragend', function() {\u000a          $('#lat').val(marker_man.position.Ua);\u000a          return $('#lag').val(marker_man.position.Va);\u000a        });\u000a      });\u000a    });\u000a  });\u000a\u000a}).call(this);\u000a"]
+'
+  (in /home/X3enos/Reposit/coffee-site/app/assets/javascripts/admin.js.coffee)):
+    1: <% content_for :head do %>
+    2:     <%= javascript_include_tag 'https://maps.google.com/maps/api/js?sensor=true&language=ru' %>
+    3:     <%= javascript_include_tag 'admin' %>
+    4: <% end %>
+    5: 
+    6: <h1>Добавление координат</h1>
+  app/views/admin/places/new.html.erb:3:in `block in _app_views_admin_places_new_html_erb__583103542__616758068'
+  app/views/admin/places/new.html.erb:1:in `_app_views_admin_places_new_html_erb__583103542__616758068'
+  app/controllers/admin/places_controller.rb:12:in `new'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.4ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:30:51 +0200
+Processing by Admin::PlacesController#new as HTML
+Compiled admin.js  (91ms)  (pid 3779)
+  Rendered admin/places/_form.html.erb (2.8ms)
+  Rendered admin/places/new.html.erb within layouts/application (103.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 116ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-19 16:30:51 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-19 16:30:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /admin.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /lightbox.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-19 16:30:52 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/places/places_get" for 127.0.0.1 at 2012-03-19 16:30:54 +0200
+
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PlacesController):
+  actionpack (3.2.1) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.1) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.1) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__977170345__call__282999629__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:33:09 +0200
+Processing by Admin::PlacesController#new as HTML
+Compiled admin.js  (95ms)  (pid 3779)
+  Rendered admin/places/_form.html.erb (2.5ms)
+  Rendered admin/places/new.html.erb within layouts/application (107.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-19 16:33:09 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-19 16:33:09 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-19 16:33:09 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-19 16:33:09 +0200
+Served asset /application.js - 304 Not Modified (49ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-19 16:33:09 +0200
+Served asset /lightbox.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2012-03-19 16:33:09 +0200
+Served asset /admin.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-19 16:33:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-19 16:33:10 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-19 16:33:10 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-19 16:33:10 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-19 16:33:10 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-19 16:33:10 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-19 16:33:10 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/places/places_get" for 127.0.0.1 at 2012-03-19 16:33:11 +0200
+
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PlacesController):
+  actionpack (3.2.1) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.1) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.1) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__977170345__call__282999629__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-19 16:33:18 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Processing by Admin::PlacesController#new as HTML
+Compiled admin.js  (98ms)  (pid 3779)
+  Rendered admin/places/_form.html.erb (2.9ms)
+  Rendered admin/places/new.html.erb within layouts/application (111.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 123ms (Views: 122.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /lightbox.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /admin.js - 200 OK (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-19 16:36:25 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-19 16:36:26 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-19 16:36:26 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/places/places_get" for 127.0.0.1 at 2012-03-19 16:36:26 +0200
+
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PlacesController):
+  actionpack (3.2.1) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.1) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.1) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__977170345__call__282999629__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-19 16:36:36 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:37:15 +0200
+Processing by Admin::PlacesController#new as HTML
+Compiled admin.js  (109ms)  (pid 3779)
+  Rendered admin/places/_form.html.erb (2.6ms)
+  Rendered admin/places/new.html.erb within layouts/application (121.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 171ms (Views: 170.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-19 16:37:15 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:15 +0200
+Served asset /admin.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:15 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:15 +0200
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:15 +0200
+Served asset /lightbox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:15 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-19 16:37:16 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-19 16:37:16 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-19 16:37:16 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_over_.png" for 127.0.0.1 at 2012-03-19 16:37:16 +0200
+Served asset /front/nav_over_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-19 16:37:16 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-19 16:37:16 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-19 16:37:16 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/places/places_get" for 127.0.0.1 at 2012-03-19 16:37:17 +0200
+
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PlacesController):
+  actionpack (3.2.1) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.1) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.1) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__977170345__call__282999629__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/admin/places/new" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Processing by Admin::PlacesController#new as HTML
+Compiled admin.js  (103ms)  (pid 3779)
+  Rendered admin/places/_form.html.erb (3.5ms)
+  Rendered admin/places/new.html.erb within layouts/application (125.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 139ms (Views: 138.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /lightbox.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /admin.js - 200 OK (2ms)
+
+
+Started GET "/assets/front/bg.gif" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /front/bg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/header_.png" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /front/header_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/content_.png" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /front/content_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_.png" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /front/nav_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/nav_on_.png" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /front/nav_on_.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/front/body_.png" for 127.0.0.1 at 2012-03-19 16:37:42 +0200
+Served asset /front/body_.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin/places/places_get" for 127.0.0.1 at 2012-03-19 16:37:43 +0200
+
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PlacesController):
+  actionpack (3.2.1) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.1) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.1) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__977170345__call__282999629__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/X3enos/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/X3enos/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)

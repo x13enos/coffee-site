@@ -7,6 +7,7 @@ $ ->
 	$('#link_to_maps').click((e) ->
 		e.preventDefault()
 		$('#content').append('<div style="width: 450px; height: 400px;" id="map_canvas"></div>')
+		$('#content').append('<input type="button" value="Return to my position" id="button_return"></input>')
 		$('#link_to_maps').hide()
 		myOptions = 
 		    center: new google.maps.LatLng(44.59389, 33.529587)
@@ -45,7 +46,15 @@ $ ->
           	$('#lat').val(marker_man.position.Ua)
           	$('#lag').val(marker_man.position.Va)
           )
-        )
 
+          $('#button_return').click( ->
+          	marker_man.setOptions(
+          		position: initialLocation
+          		map: map
+          	)
+          	$('#lat').val(position.coords.latitude)
+          	$('#lag').val(position.coords.longitude)
+          )
+        )
         
 	)
