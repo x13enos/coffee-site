@@ -11,7 +11,7 @@ $ ->
 		$('#link_to_maps').hide()
 		myOptions = 
 		    center: new google.maps.LatLng(44.59389, 33.529587)
-		    zoom: 11
+		    zoom: 14
 		    mapTypeId: google.maps.MapTypeId.ROADMAP
 		   
 		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions)
@@ -39,19 +39,23 @@ $ ->
             icon: "http://maps.google.com/mapfiles/kml/shapes/man.png"
             clickable: true
           )
+          map.setOptions(center: initialLocation)
           $('#lat').val(position.coords.latitude)
           $('#lag').val(position.coords.longitude)
+
 
           google.maps.event.addListener(marker_man, 'dragend', ->
           	$('#lat').val(marker_man.position.Ua)
           	$('#lag').val(marker_man.position.Va)
           )
 
+
           $('#button_return').click( ->
           	marker_man.setOptions(
           		position: initialLocation
           		map: map
           	)
+          	map.setOptions(center: initialLocation)
           	$('#lat').val(position.coords.latitude)
           	$('#lag').val(position.coords.longitude)
           )
