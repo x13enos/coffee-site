@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class Admin::ImagesController < ApplicationController
+class Admin::ImagesController < AdminController
 
   def index
   	@paintings = Painting.all

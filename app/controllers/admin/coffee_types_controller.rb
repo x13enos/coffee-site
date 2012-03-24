@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class Admin::CoffeeTypesController < ApplicationController
+class Admin::CoffeeTypesController < AdminController
 
 	def index
 		@coffee_types = CoffeeType.all

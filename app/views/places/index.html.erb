@@ -19,17 +19,13 @@
             
     <div id="content_right" style="width: 173px;">
                 
-        <h2 style="font-size:21px;">About</h2>
-        <hr color="#cccccc" size="0.5" width="160px" style="margin-left: 0px; margin-top: 7px;">
-                     
-        <h5 style="margin-top: 16px; margin-right: 10px;">Маркер человечка - ваше местоположение. Если нажать на маркер автомата с кофе, будет показан его адрес.</h5> <br>
-                     
-        <h2 style="font-size:21px;">Links</h2>
-        <hr color="#cccccc" size="0.5" width="160px" style="margin-left: 0px; margin-top: 7px;">
-                     
-        <dl>
-            <dt><a href="http://maps.google.ru/" class="blue"><h5>Google maps</h5></a></dt>
-        </dl>    
+        <div>Категории</div>        
+        <% @categories.each do |c| %>
+            <div>
+                <input type="checkbox" id=<%= c.id %> />
+                <%= c.name %>
+            </div>
+        <% end %>
             	
     </div>
             

@@ -1,0 +1,11 @@
+<%= form_for @user, :url => :users do |u| %>
+	<div>
+		<%= u.label 'Имя' %>
+		<%= u.text_field :name %>
+	</div>
+	<div>
+		<%= u.label 'Email' %>
+		<%= u.text_field :email %>
+	</div>
+	<div><%= u.submit 'Сохранить пользователя' %></div>
+<% end %>

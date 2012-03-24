@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= stylesheet_link_tag    "admin", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "lightbox" %>
+  <%= yield :head %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  
+  <div class="nav_menu">
+
+    <%= link_to "Типы кофе", admin_coffee_types_path %>
+    <%= link_to "Изображеньки", admin_images_path %>
+    <%= link_to "Категории меток", admin_categorys_path %>
+
+  </div>
+
+  <div id="admin_content"><%= yield %></div>            
+          
+</body>
+</html>

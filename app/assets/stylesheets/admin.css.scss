@@ -1,3 +1,26 @@
 // Place all the styles related to the Admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav_menu > a{
+	text-align: center;
+	display: block;
+	float: left;
+	width: 150px;
+	height: 20px;
+	border: 1px solid;
+}
+
+#admin_content{
+	clear: both;
+}
+
+.category_admin{
+	display: block;
+}
+
+#new_category{
+	display:block;
+	margin-top: 20px;
+	color: #000;
+}

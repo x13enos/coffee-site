@@ -2,12 +2,13 @@
 class PlacesController < ApplicationController
 
   def index
+  	@categories = Category.all
   end
 
   def get_places
-  	@places = Place.all
+  	@categories = Category.all
 
-  	render :json => @places
+  	render :json => @categories, :include => :places
   end
   
 end

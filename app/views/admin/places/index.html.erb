@@ -1,9 +1,10 @@
 <%= content_tag(:div, flash.notice) %>
-<% @place.each do |c| %>
+<% @places.each do |c| %>
 	<div>
 		<%= c.lat %>,
 		<%= c.long %>
-		<%= link_to image_tag("admin/close-icon.gif"), admin_place_path(c), :method => :delete %>
+		<%= link_to image_tag("admin/close-icon.gif"), admin_category_place_path(@category.id, c), :method => :delete %>
 	</div>
 <% end %>
-<%= link_to "Добавить координаты", new_admin_place_path %>
+<%= link_to "Добавить координаты", new_admin_category_place_path(@category.id) %>
+

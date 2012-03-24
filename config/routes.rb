@@ -1,14 +1,19 @@
 # -*- encoding : utf-8 -*-
 CoffeeSite::Application.routes.draw do
 
+  
+
   namespace :admin do
     resources :coffee_types
     resources :images
-    resources :places
+    resources :categorys do
+      resources :places
+    end
   end
 
   resources :admin, :only => :index
-  
+  resources :users
+    
   match "home" => "pages#home"
 
   match "price" => "pages#price"

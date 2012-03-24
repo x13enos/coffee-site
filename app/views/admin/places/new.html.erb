@@ -8,3 +8,9 @@
 <%= render "form" %>
 
 <%= link_to "Посмотреть и отметить на карте", '#', :id => "link_to_maps" %>
+
+<%= content_for :head do %>
+	<script type="text/javascript">
+		window.category_id = <%= @category.id %>
+	</script>
+<% end %>

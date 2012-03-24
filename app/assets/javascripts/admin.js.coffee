@@ -6,8 +6,8 @@
 $ ->
 	$('#link_to_maps').click((e) ->
 		e.preventDefault()
-		$('#content').append('<div style="width: 450px; height: 400px;" id="map_canvas"></div>')
-		$('#content').append('<input type="button" value="Return to my position" id="button_return"></input>')
+		$('body').append('<div style="width: 450px; height: 400px;" id="map_canvas"></div>')
+		$('body').append('<input type="button" value="Return to my position" id="button_return"></input>')
 		$('#link_to_maps').hide()
 		myOptions = 
 		    center: new google.maps.LatLng(44.59389, 33.529587)
@@ -18,7 +18,7 @@ $ ->
 		infomarker = new google.maps.InfoWindow
 
 		$.ajax(
-			url: 'places_get'
+			url: '/admin/categorys/' + window.category_id + '/places.json'
 			success: (data) ->
 				$(data).each( ->
 					marker = new google.maps.Marker(
@@ -28,6 +28,11 @@ $ ->
 			        )
 				)
 		)
+
+		latlng_val = (x, y) ->
+          $('#lat').val(x)
+          $('#lag').val(y)
+
 
 		navigator.geolocation.getCurrentPosition((position) ->
           initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude)
@@ -40,13 +45,11 @@ $ ->
             clickable: true
           )
           map.setOptions(center: initialLocation)
-          $('#lat').val(position.coords.latitude)
-          $('#lag').val(position.coords.longitude)
-
-
+          latlng_val(position.coords.latitude, position.coords.longitude)
+          
+       
           google.maps.event.addListener(marker_man, 'dragend', ->
-          	$('#lat').val(marker_man.position.Ua)
-          	$('#lag').val(marker_man.position.Va)
+          	latlng_val(marker_man.position.Ua, marker_man.position.Va)
           )
 
 
@@ -56,8 +59,7 @@ $ ->
           		map: map
           	)
           	map.setOptions(center: initialLocation)
-          	$('#lat').val(position.coords.latitude)
-          	$('#lag').val(position.coords.longitude)
+          	latlng_val(position.coords.latitude, position.coords.longitude)
           )
         )
         
