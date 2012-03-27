@@ -3,7 +3,7 @@ class Admin::PlacesController < AdminController
   before_filter :get_category
 
   def index
-  	@places = Place.where('category_id = ?', @category.id)
+  	@places = @category.places
 
     respond_to do |format|
 
@@ -24,8 +24,8 @@ class Admin::PlacesController < AdminController
   end
 
   def create
-  	@place = @category.places.new(params[:place])
-  	@place.save
+  	@place = @category.places.new(params[:place].merge(:enable => true), :without_protection => true)
+    @place.save
   	redirect_to admin_category_places_path(@category.id)
   end
 

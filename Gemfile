@@ -10,6 +10,7 @@ gem 'carrierwave'
 gem "rmagick"
 gem "heroku"
 gem "magic_encoding"
+gem "devise", '2.0'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,0 +1,17 @@
+<%= form_for @place, :url => :my_places do |p| %>
+	<div>
+		<%= p.label 'Широта' %>
+		<%= p.text_field :lat, :id => "lat" %>
+	</div>
+	<div>
+		<%= p.label 'Долгота' %>
+		<%= p.text_field :long, :id => 'lag' %>
+	</div>
+	<div>
+		<%= p.label 'Выберите категорию' %>
+		<%= p.select :category_id, Category.all.collect {|c|[ c.name, c.id ]}, {:include_blank => true} %>
+	</div>
+	<div>
+		<%= p.submit 'Сохранить метку' %>
+	</div>
+<% end %>

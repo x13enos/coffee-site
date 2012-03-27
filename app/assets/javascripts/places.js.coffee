@@ -12,7 +12,7 @@ $ ->
   infomarker = new google.maps.InfoWindow
 
   $.ajax(
-    url: "places/get"
+    url: "/places/get"
     success: (data) ->
       $(data).each( ->
         array_marker = []
@@ -43,6 +43,7 @@ $ ->
           )
           array_marker.push(marker)
         )
+
         $('input:checkbox[id = "'+this.id+'"]').click( ->
           if (this.checked == true)
             $(array_marker).each( -> this.setOptions visible: true)

@@ -8,7 +8,7 @@ class PlacesController < ApplicationController
   def get_places
   	@categories = Category.all
 
-  	render :json => @categories, :include => :places
+  	render :json => @categories.as_json(:methods => :sort_places)
   end
   
 end
