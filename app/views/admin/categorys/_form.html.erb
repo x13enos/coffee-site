@@ -1,4 +1,4 @@
-<%= form_for @category, :url => :admin_categorys do |f| %>
+<%= form_for [:admin, @category] do |f| %>
 
   <div>
     <%= f.label :name %><br />

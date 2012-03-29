@@ -21,7 +21,7 @@ $ ->
 		  url: "/places/get"
 		  success: (data) ->
 		    $(data).each( ->
-		      $(this.places).each( ->
+		      $(this.sort_places).each( ->
 		        marker = new google.maps.Marker(
 		          position: new google.maps.LatLng(this.lat, this.long)
 		          map: map
@@ -69,14 +69,13 @@ $ ->
           
        
           google.maps.event.addListener(marker_man, 'dragend', ->
-          	latlng_val(marker_man.position.Ua, marker_man.position.Va)
+          	latlng_val(marker_man.position.Ta, marker_man.position.Ua)
           )
 
 
           $('#button_return').click( ->
           	marker_man.setOptions(
           		position: initialLocation
-          		map: map
           	)
           	map.setOptions(center: initialLocation)
           	latlng_val(position.coords.latitude, position.coords.longitude)

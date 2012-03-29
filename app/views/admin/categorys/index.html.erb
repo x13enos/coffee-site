@@ -1,8 +1,9 @@
 <% @categorys.each do |c| %>
 	<div class="category_admin">
-		<%= link_to c.name, admin_category_places_path(c) %>
+		<%= link_to c.name, admin_places_path(:filter => c.id, :filter_name => c.name) %>
 		<%= link_to image_tag("admin/close-icon.gif"), admin_category_path(c), :method => :delete %>
+		<%= link_to image_tag("admin/edit_icon.jpg"), edit_admin_category_path(c) %>
 	</div>
 <% end %>
 
-<div><%= link_to "Новая категория", new_admin_category_path, :id => "new_category" %></div> 
+<div><%= link_to "Новая категория", new_admin_category_path, :id => "new_category" %></div>

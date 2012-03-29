@@ -19,7 +19,7 @@ class My::PlacesController < ApplicationController
   def create
   	@place = current_user.places.new(params[:place])
   	@place.save
-  	redirect_to my_places_path
+  	redirect_to places_path
   end
 
   def get_places

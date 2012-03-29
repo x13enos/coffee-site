@@ -20,6 +20,16 @@ class Admin::CategorysController < AdminController
   	redirect_to admin_categorys_path
   end
 
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    @category.update_attributes(params[:category])
+    redirect_to admin_categorys_path
+  end
+
   def destroy
     @category = Category.find(params[:id])
     @category.destroy

@@ -16,7 +16,7 @@ $ ->
     success: (data) ->
       $(data).each( ->
         array_marker = []
-        $(this.places).each( ->
+        $(this.sort_places).each( ->
           marker = new google.maps.Marker(
             position: new google.maps.LatLng(this.lat, this.long)
             map: map
