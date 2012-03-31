@@ -15,6 +15,6 @@
 		<%= f.label 'Утверждена' %>
 		<%= f.check_box :enable %>
 	</div>
-		<% text_field_tag(:back_url, params[:back_url]) %>
+		<%= text_field_tag(:back_url, params[:back_url], :class => 'disabled') %>
 		<%= f.submit "Сохранить координаты" %>
 <% end %>

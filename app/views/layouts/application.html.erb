@@ -14,10 +14,10 @@
       
       <div id="login">
         <% if user_signed_in? %>
-          Signed in as <%= current_user.name %>. Not you?
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          Вы зашли как <%= current_user.name %>. Неправильно?
+          <%= link_to "Выход", destroy_user_session_path, :method => :delete %>
         <% else %>
-          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+          <%= link_to "Регистрация", new_user_registration_path %> или <%= link_to "Вход", new_user_session_path %>
         <% end %>
       </div>
 

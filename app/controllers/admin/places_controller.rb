@@ -6,7 +6,7 @@ class Admin::PlacesController < AdminController
   	  @places = Place.where('enable = ?', false)
     else
       get_category
-      @places = @category.places
+      @places = @category.places.where('enable = ?', true)
     end
 
     respond_to do |format|
@@ -40,7 +40,7 @@ class Admin::PlacesController < AdminController
 
     respond_to do |format|
       format.html
-      format.json { render :json }
+      format.json { render :json => @place }
     end
   end
 
