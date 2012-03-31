@@ -1,16 +1,21 @@
 <%= content_tag(:div, flash.notice) %>
+<%if params[:filter] != 'untested_places' %>
+	<h2><%= @category.name %></h2>
+	<%= link_to "Добавить координаты", new_admin_place_path(:category_id => params[:category_id]) %>
+<% else %>
+	<h2>Непроверенные метки</h2>
+<% end %>
 <% @places.each do |c| %>
 	<div>
 		<%= c.lat %>,
 		<%= c.long %>
 		<% if params[:filter] == 'untested_places' %>
 			<%= link_to image_tag('admin/edit_icon.jpg'), edit_admin_place_path(c, :back_url => 'untested_places') %>
-			<%= link_to image_tag("admin/close-icon.gif"), admin_place_path(c, :filter => 'untested_places'), :method => :delete %>
+			<%= link_to image_tag("admin/close-icon.gif"), admin_place_path(c, :back_url => 'untested_places'), :method => :delete %>
 		<% else %>
 			<%= link_to image_tag('admin/edit_icon.jpg'), edit_admin_place_path(c) %>
 			<%= link_to image_tag("admin/close-icon.gif"), admin_place_path(c), :method => :delete %>
 		<% end %>
 	</div>
 <% end %>
-<%= link_to "Добавить координаты", new_admin_place_path %>
 

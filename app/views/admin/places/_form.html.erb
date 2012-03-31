@@ -8,9 +8,13 @@
 		<%= f.text_field :long, :id => 'lag' %>
 	</div>
 	<div>
+		<%= f.label 'Выберите категорию' %>
+		<%= f.select :category_id, Category.all.collect {|c|[ c.name, c.id ]} %>
+	</div>
+	<div>
 		<%= f.label 'Утверждена' %>
 		<%= f.check_box :enable %>
 	</div>
-		<%= text_field_tag(:back_url, params[:back_url] ) %>
+		<% text_field_tag(:back_url, params[:back_url]) %>
 		<%= f.submit "Сохранить координаты" %>
 <% end %>

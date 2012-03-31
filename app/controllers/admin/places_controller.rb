@@ -9,7 +9,6 @@ class Admin::PlacesController < AdminController
       @places = @category.places
     end
 
-
     respond_to do |format|
 
       format.html
@@ -21,6 +20,7 @@ class Admin::PlacesController < AdminController
   end
 
   def new
+    get_category
   	@place = Place.new
   	respond_to do |format|
   		format.html
@@ -29,34 +29,44 @@ class Admin::PlacesController < AdminController
   end
 
   def create
-    get_category
+    @category = Category.find(params[:place][:category_id])
   	@place = @category.places.new(params[:place].merge(:enable => true), :without_protection => true)
     @place.save
-  	redirect_to admin_category_places_path(@category.id)
+  	redirect_to admin_places_path(:category_id => @category.id)
   end
 
-  def edit
+  def edit 
     @place = Place.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render :json }
+    end
   end
 
   def update
     @place = Place.find(params[:id])
     @place.update_attributes(params[:place], :without_protection => true)
-    redirect_to :back
+    if params[:back_url] == 'untested_places'
+      redirect_to admin_places_path(:filter => 'untested_places')
+    else
+      redirect_to admin_places_path(:category_id => @place.category_id)
+    end
   end
 
   def destroy
     @place = Place.find(params[:id])
-    if @place.destroy
-      redirect_to admin_places_path(:filter => 'untested_places'), :notice => "Координаты были удалены"
+    @place.destroy
+    if params[:back_url] == 'untested_places'
+      redirect_to admin_places_path(:filter => 'untested_places')
     else
-      redirect_to admin_places_path(:filter => 'untested_places'), :notice => "Ошибка при удалении" 
+      redirect_to admin_places_path(:category_id => @place.category_id)
     end
   end
 
   private
 
   def get_category
-    @category = Category.find(params[:filter])
+    @category = Category.find(params[:category_id])
   end
 end

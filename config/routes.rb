@@ -7,7 +7,7 @@ CoffeeSite::Application.routes.draw do
   namespace :admin do
     resources :coffee_types
     resources :images
-    resources :categorys
+    resources :categories
     resources :places
   end
 
