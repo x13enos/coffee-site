@@ -1,8 +1,12 @@
-<%= form_for [:admin, @category] do |f| %>
+<%= form_for [:admin, @category], :multipart => true do |f| %>
 
   <div>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
+  </div>
+  <div>
+  	<%= f.file_field :image %>
+  	<%= image_tag @category.image if @category.image? %>
   </div>
   <div>
     <%= f.submit "Сохранить" %>
