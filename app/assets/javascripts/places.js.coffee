@@ -15,6 +15,7 @@ $ ->
     url: "/places/get"
     success: (data) ->
       $(data).each( ->
+        icon_category = this.image.url
         array_marker = []
         $(this.sort_places).each( ->
           marker = new google.maps.Marker(
@@ -22,6 +23,7 @@ $ ->
             map: map
             clickable: true
             visible: false
+            icon: icon_category
           )
 
           google.maps.event.addListener(marker, 'click', ->

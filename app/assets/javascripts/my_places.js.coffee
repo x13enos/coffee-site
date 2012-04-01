@@ -21,11 +21,13 @@ $ ->
 		  url: "/places/get"
 		  success: (data) ->
 		    $(data).each( ->
+		      icon_category = this.image.url
 		      $(this.sort_places).each( ->
 		        marker = new google.maps.Marker(
 		          position: new google.maps.LatLng(this.lat, this.long)
 		          map: map
 		          clickable: true
+		          icon: icon_category
 		        )
 
 		        google.maps.event.addListener(marker, 'click', ->

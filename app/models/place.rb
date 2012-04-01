@@ -6,4 +6,5 @@ class Place < ActiveRecord::Base
 
 	attr_protected :enable
 
+
 end
